@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+  hardware.graphics.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -50,15 +51,16 @@
       nil
       alejandra
       lua-language-server
-      # typos-lsp
       typos
+      clang-tools
 
       rustup
-      # lld
       cargo-nextest
       deno
       nodejs_23
       pnpm
+      jdk
+      jdt-language-server
 
       telegram-desktop
       zellij
@@ -66,15 +68,23 @@
       gnomeExtensions.blur-my-shell
       gnome-tweaks
 
+      delta
+
       rose-pine-cursor
+
+      cargo-binstall
+
+      # temp
     ];
   };
 
   fonts.packages = with pkgs; [
     nerd-fonts.space-mono
-    geist-font
+    nerd-fonts.martian-mono
+    nerd-fonts.jetbrains-mono
     inter
   ];
+  fonts.enableDefaultPackages = false;
 
   environment.systemPackages = with pkgs; [
     git
@@ -91,6 +101,9 @@
     ripgrep
     byedpi
     sd
+
+    # openvpn
+    # update-resolv-conf
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -101,6 +114,7 @@
 
   environment.variables = {
     EDITOR = "nvim";
+    # SHELL = "fish";
     ZED_ALLOW_EMULATED_GPU = "1";
   };
 
@@ -113,6 +127,8 @@
   # };
 
   # List services that you want to enable:
+
+  services.flatpak.enable = true;
 
   services.xserver = {
     enable = true;
