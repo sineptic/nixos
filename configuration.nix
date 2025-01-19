@@ -37,6 +37,13 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
+    enableSSHSupport = true;
+  };
+
   users.users.sineptic = {
     isNormalUser = true;
     extraGroups = ["wheel"];
@@ -73,8 +80,6 @@
       rose-pine-cursor
 
       cargo-binstall
-
-      # temp
     ];
   };
 
@@ -82,6 +87,9 @@
     nerd-fonts.space-mono
     nerd-fonts.martian-mono
     nerd-fonts.jetbrains-mono
+    nerd-fonts.zed-mono
+    iosevka
+    # nerd-fonts.iosevka-term
     inter
   ];
   fonts.enableDefaultPackages = false;
@@ -92,7 +100,7 @@
     vim
     neovim
     clang
-    # gcc
+
     alacritty
     fish
     wget
@@ -102,8 +110,8 @@
     byedpi
     sd
 
-    # openvpn
-    # update-resolv-conf
+    gnupg
+    pass
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -173,4 +181,3 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
 }
-
