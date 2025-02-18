@@ -70,7 +70,7 @@
       jdk
       jdt-language-server
 
-      telegram-desktop
+      # telegram-desktop
       zellij
       starship
       gnomeExtensions.blur-my-shell
