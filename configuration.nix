@@ -90,11 +90,11 @@
   };
 
   fonts.packages = with pkgs; [
-    # nerd-fonts.space-mono
-    # nerd-fonts.martian-mono
-    # nerd-fonts.jetbrains-mono
-    # nerd-fonts.zed-mono
-    # nerd-fonts.geist-mono
+    nerd-fonts.space-mono
+    nerd-fonts.martian-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.zed-mono
+    nerd-fonts.geist-mono
     iosevka
     # nerd-fonts.iosevka-term
     inter
