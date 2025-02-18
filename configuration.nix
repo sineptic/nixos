@@ -65,7 +65,7 @@
       just
       cargo-nextest
       deno
-      nodejs_23
+      # nodejs_23
       pnpm
       jdk
       jdt-language-server
