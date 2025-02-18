@@ -62,6 +62,7 @@
       clang-tools
 
       rustup
+      just
       cargo-nextest
       deno
       nodejs_23
@@ -74,12 +75,17 @@
       starship
       gnomeExtensions.blur-my-shell
       gnome-tweaks
+      obsidian
 
       delta
 
       rose-pine-cursor
 
       cargo-binstall
+
+      go
+      gopls
+      gofumpt
     ];
   };
 
@@ -88,6 +94,7 @@
     nerd-fonts.martian-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
+    nerd-fonts.geist-mono
     iosevka
     # nerd-fonts.iosevka-term
     inter
