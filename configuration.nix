@@ -53,7 +53,7 @@
       yazi
       lazygit
 
-      # zed-editor
+      zed-editor
       nixd
       nil
       alejandra
