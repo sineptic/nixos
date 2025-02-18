@@ -5,6 +5,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   imports = [
@@ -65,10 +66,6 @@
       just
       cargo-nextest
       deno
-      nodejs_23
-      pnpm
-      jdk
-      jdt-language-server
 
       # telegram-desktop
       zellij
@@ -101,25 +98,29 @@
   ];
   fonts.enableDefaultPackages = false;
 
-  environment.systemPackages = with pkgs; [
-    git
-    jujutsu
-    vim
-    neovim
-    clang
+  environment.systemPackages =
+    (with pkgs; [
+      jujutsu
+      clang
 
-    alacritty
-    fish
-    wget
-    btop
-    xclip
-    ripgrep
-    byedpi
-    sd
+      alacritty
+      fish
+      wget
+      btop
+      xclip
+      ripgrep
+      byedpi
+      sd
+    ])
+    ++ (with pkgs-stable; [
+      git
+      vim
+      neovim
 
-    gnupg
-    pass
-  ];
+      gnupg
+      pass
+    ]);
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add any missing dynamic libraries for unpackaged programs
@@ -140,8 +141,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
 
   services.flatpak.enable = true;
 
