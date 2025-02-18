@@ -12,7 +12,7 @@
     ...
   } @ inputs: {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.my-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Import the previous configuration.nix we used,
