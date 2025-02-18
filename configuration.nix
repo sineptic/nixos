@@ -48,44 +48,44 @@
     isNormalUser = true;
     extraGroups = ["wheel"];
     packages = with pkgs; [
-      # eza
-      # ungoogled-chromium
-      # yazi
-      # lazygit
+      eza
+      ungoogled-chromium
+      yazi
+      lazygit
 
       # zed-editor
       nixd
       nil
       alejandra
-      # lua-language-server
-      # typos
-      # clang-tools
+      lua-language-server
+      typos
+      clang-tools
 
-      # rustup
-      # just
-      # cargo-nextest
-      # deno
-      # nodejs_23
-      # pnpm
-      # jdk
-      # jdt-language-server
+      rustup
+      just
+      cargo-nextest
+      deno
+      nodejs_23
+      pnpm
+      jdk
+      jdt-language-server
 
       # telegram-desktop
       zellij
       starship
-      # gnomeExtensions.blur-my-shell
-      # gnome-tweaks
-      # obsidian
-      #
-      # delta
+      gnomeExtensions.blur-my-shell
+      gnome-tweaks
+      obsidian
+
+      delta
 
       rose-pine-cursor
 
-      # cargo-binstall
+      cargo-binstall
 
-      # go
-      # gopls
-      # gofumpt
+      go
+      gopls
+      gofumpt
     ];
   };
 
@@ -103,10 +103,10 @@
 
   environment.systemPackages = with pkgs; [
     git
-    # jujutsu
+    jujutsu
     vim
     neovim
-    # clang
+    clang
 
     alacritty
     fish
@@ -114,18 +114,18 @@
     btop
     xclip
     ripgrep
-    # byedpi
+    byedpi
     sd
 
     gnupg
     pass
   ];
-  # programs.nix-ld.enable = true;
-  # programs.nix-ld.libraries = with pkgs; [
-  #   # Add any missing dynamic libraries for unpackaged programs
-  #   # here, NOT in environment.systemPackages
-  #   typos-lsp
-  # ];
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+    typos-lsp
+  ];
 
   environment.variables = {
     EDITOR = "nvim";
