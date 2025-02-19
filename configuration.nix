@@ -67,7 +67,7 @@
       cargo-nextest
       deno
 
-      # telegram-desktop
+      telegram-desktop
       zellij
       starship
       gnomeExtensions.blur-my-shell
