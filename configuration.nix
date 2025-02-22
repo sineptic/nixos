@@ -160,6 +160,7 @@
     gnome-maps
     gnome-music
     gnome-weather
+    snapshot
     simple-scan
   ];
 
