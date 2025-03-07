@@ -83,6 +83,8 @@
       go
       gopls
       gofumpt
+
+      cargo-flamegraph
     ];
   };
 
@@ -127,7 +129,6 @@
     # here, NOT in environment.systemPackages
     typos-lsp
   ];
-
   environment.variables = {
     EDITOR = "nvim";
     # SHELL = "fish";
