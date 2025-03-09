@@ -63,6 +63,7 @@
       clang-tools
 
       rustup
+      zig
       just
       cargo-nextest
       deno
