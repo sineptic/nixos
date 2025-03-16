@@ -54,10 +54,6 @@
       yazi
       lazygit
 
-      zed-editor
-      nixd
-      nil
-      alejandra
       lua-language-server
       typos
       clang-tools
@@ -67,6 +63,7 @@
       just
       cargo-nextest
       deno
+      uv
 
       telegram-desktop
       zellij
@@ -80,6 +77,7 @@
       rose-pine-cursor
 
       cargo-binstall
+      tokei
 
       go
       gopls
@@ -95,8 +93,6 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
     nerd-fonts.geist-mono
-    iosevka
-    # nerd-fonts.iosevka-term
     inter
   ];
   fonts.enableDefaultPackages = false;
@@ -114,6 +110,11 @@
       ripgrep
       byedpi
       sd
+
+      zed-editor
+      nixd
+      nil
+      alejandra
     ])
     ++ (with pkgs-stable; [
       git
