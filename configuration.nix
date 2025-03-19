@@ -94,6 +94,7 @@
     nerd-fonts.zed-mono
     nerd-fonts.geist-mono
     inter
+    maple-mono
   ];
   fonts.enableDefaultPackages = false;
 
