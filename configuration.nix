@@ -52,7 +52,6 @@
       eza
       ungoogled-chromium
       yazi
-      lazygit
 
       lua-language-server
       typos
@@ -101,6 +100,7 @@
   environment.systemPackages =
     (with pkgs; [
       jujutsu
+      lazygit
       clang
 
       alacritty
