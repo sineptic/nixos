@@ -72,6 +72,7 @@
       obsidian
 
       delta
+      difftastic
 
       rose-pine-cursor
 
