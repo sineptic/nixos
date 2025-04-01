@@ -94,7 +94,9 @@
     nerd-fonts.zed-mono
     nerd-fonts.geist-mono
     inter
-    maple-mono
+    maple-mono.CN
+
+    atkinson-hyperlegible-next
   ];
   fonts.enableDefaultPackages = false;
 
