@@ -70,6 +70,9 @@
       gnomeExtensions.blur-my-shell
       gnome-tweaks
       obsidian
+      discord
+      cassette
+      foliate
 
       delta
       difftastic
@@ -119,6 +122,8 @@
       nixd
       nil
       alejandra
+
+      kubo
     ])
     ++ (with pkgs-stable; [
       git
