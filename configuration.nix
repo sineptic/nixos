@@ -174,6 +174,11 @@
     gnome-weather
     snapshot
     simple-scan
+
+    source-code-pro
+    cantarell-fonts
+    dejavu_fonts
+    source-sans
   ];
 
   # Copy the NixOS configuration file and link it from the resulting system
