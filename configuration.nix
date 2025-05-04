@@ -87,6 +87,18 @@
       gofumpt
 
       cargo-flamegraph
+
+      # Experimental apps, maybe unneeded
+      blanket
+      bustle
+      curtail
+      dialect
+      errands
+      junction
+      newsflash
+      gnome-obfuscate
+      resources
+      tuba
     ];
   };
 
