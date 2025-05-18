@@ -81,6 +81,7 @@
 
       cargo-binstall
       tokei
+      single-file-cli
 
       go
       gopls
@@ -108,6 +109,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
     nerd-fonts.geist-mono
+    nerd-fonts.terminess-ttf
+    recursive
     inter
     maple-mono.CN
 
