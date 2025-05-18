@@ -70,7 +70,6 @@
       gnomeExtensions.blur-my-shell
       gnome-tweaks
       obsidian
-      discord
       cassette
       foliate
 
