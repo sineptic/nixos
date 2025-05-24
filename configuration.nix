@@ -109,6 +109,7 @@
     nerd-fonts.zed-mono
     nerd-fonts.geist-mono
     nerd-fonts.terminess-ttf
+    nerd-fonts.gohufont
     recursive
     inter
     maple-mono.CN
@@ -122,6 +123,7 @@
       jujutsu
       lazygit
       clang
+      nushell
 
       alacritty
       fish
