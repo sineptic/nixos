@@ -110,6 +110,7 @@
     nerd-fonts.geist-mono
     nerd-fonts.terminess-ttf
     nerd-fonts.gohufont
+    nerd-fonts.fantasque-sans-mono
     recursive
     inter
     maple-mono.CN
