@@ -63,6 +63,7 @@
       cargo-nextest
       deno
       uv
+      uxn
 
       telegram-desktop
       zellij
@@ -116,6 +117,7 @@
     maple-mono.CN
 
     atkinson-hyperlegible-next
+    lexend
   ];
   fonts.enableDefaultPackages = false;
 
@@ -141,6 +143,7 @@
       alejandra
 
       kubo
+      protonvpn-gui
     ])
     ++ (with pkgs-stable; [
       git
