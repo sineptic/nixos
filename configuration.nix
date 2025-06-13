@@ -144,6 +144,7 @@
 
       kubo
       protonvpn-gui
+      tor-browser-bundle-bin
     ])
     ++ (with pkgs-stable; [
       git
@@ -180,6 +181,9 @@
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
+  };
+  services.tor = {
+    enable = true;
   };
   environment.gnome.excludePackages = with pkgs; [
     orca
