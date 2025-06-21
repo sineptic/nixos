@@ -63,9 +63,13 @@
       zig
       just
       cargo-nextest
+      cargo-flamegraph
       deno
       uv
       uxn
+      go
+      gopls
+      gofumpt
 
       telegram-desktop
       zellij
@@ -84,12 +88,6 @@
       cargo-binstall
       tokei
       single-file-cli
-
-      go
-      gopls
-      gofumpt
-
-      cargo-flamegraph
 
       # Experimental apps, maybe unneeded
       blanket
@@ -184,9 +182,9 @@
 
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
   };
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.tor = {
     enable = true;
   };
