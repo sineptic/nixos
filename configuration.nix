@@ -47,11 +47,12 @@
 
   users.users.sineptic = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "docker"];
     packages = with pkgs; [
       eza
       ungoogled-chromium
       yazi
+      halloy
 
       lua-language-server
       typos
@@ -115,6 +116,7 @@
     recursive
     inter
     maple-mono.CN
+    dm-mono
 
     atkinson-hyperlegible-next
     lexend
@@ -143,6 +145,7 @@
       alejandra
 
       kubo
+      docker
       protonvpn-gui
       tor-browser-bundle-bin
     ])
@@ -154,6 +157,7 @@
       gnupg
       pass
     ]);
+  virtualisation.docker.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
