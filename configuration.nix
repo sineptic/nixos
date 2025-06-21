@@ -22,13 +22,6 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   time.timeZone = "Europe/Moscow";
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us,ru";
-    options = "grp:win_space_toggle";
-  };
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
@@ -178,16 +171,6 @@
   #   enableSSHSupport = true;
   # };
 
-  services.flatpak.enable = true;
-
-  services.xserver = {
-    enable = true;
-  };
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-  services.tor = {
-    enable = true;
-  };
   environment.gnome.excludePackages = with pkgs; [
     orca
     geary
@@ -207,6 +190,22 @@
     dejavu_fonts
     source-sans
   ];
+  services = {
+    flatpak.enable = true;
+
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us,ru";
+        options = "grp:win_space_toggle";
+        # options = "eurosign:e,caps:escape";
+      };
+    };
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+
+    tor.enable = true;
+  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
