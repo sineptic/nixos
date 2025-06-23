@@ -96,23 +96,26 @@
     ];
   };
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.space-mono
-    nerd-fonts.martian-mono
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.zed-mono
-    nerd-fonts.geist-mono
-    nerd-fonts.terminess-ttf
-    nerd-fonts.gohufont
-    nerd-fonts.fantasque-sans-mono
-    recursive
-    inter
-    maple-mono.CN
-    dm-mono
+  fonts.packages = with pkgs;
+    [
+      recursive
+      inter
+      maple-mono.CN
+      dm-mono
 
-    atkinson-hyperlegible-next
-    lexend
-  ];
+      atkinson-hyperlegible-next
+      lexend
+    ]
+    ++ (with pkgs.nerd-fonts; [
+      space-mono
+      martian-mono
+      jetbrains-mono
+      zed-mono
+      geist-mono
+      terminess-ttf
+      gohufont
+      fantasque-sans-mono
+    ]);
   fonts.enableDefaultPackages = false;
 
   environment.systemPackages =
