@@ -19,7 +19,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.loader.timeout = 2;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    trusted-users = [
+      "sineptic"
+    ];
+  };
   time.timeZone = "Europe/Moscow";
 
   # Enable sound.
@@ -57,6 +62,7 @@
       just
       cargo-nextest
       cargo-flamegraph
+      bun
       deno
       uv
       uxn
@@ -105,6 +111,7 @@
 
       atkinson-hyperlegible-next
       lexend
+      work-sans
     ]
     ++ (with pkgs.nerd-fonts; [
       space-mono
@@ -143,6 +150,10 @@
       docker
       protonvpn-gui
       tor-browser-bundle-bin
+
+      gprof2dot
+      linuxKernel.packages.linux_6_6.perf
+      graphviz
     ])
     ++ (with pkgs-stable; [
       git
@@ -207,7 +218,8 @@
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
 
-    tor.enable = true;
+    # tor.enable = true;
+    # tor.client.enable = true;
   };
 
   # Copy the NixOS configuration file and link it from the resulting system
