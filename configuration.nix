@@ -140,6 +140,7 @@
       ripgrep
       byedpi
       sd
+      file
 
       zed-editor
       nixd
@@ -147,9 +148,9 @@
       alejandra
 
       kubo
-      docker
-      protonvpn-gui
+      # docker
       tor-browser-bundle-bin
+      protonvpn-gui
 
       gprof2dot
       linuxKernel.packages.linux_6_6.perf
@@ -165,7 +166,7 @@
 
       yandex-music # new version doesn't work somewhy
     ]);
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -222,6 +223,9 @@
 
     # tor.enable = true;
     # tor.client.enable = true;
+  };
+  systemd.user.services.gnome-session-restart-dbus.serviceConfig = {
+    Slice = "-.slice";
   };
 
   # Copy the NixOS configuration file and link it from the resulting system
