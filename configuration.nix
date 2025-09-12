@@ -125,6 +125,10 @@
     ]);
   fonts.enableDefaultPackages = false;
 
+  networking.firewall.checkReversePath = false;
+  networking.networkmanager.plugins = [
+    pkgs.networkmanager-openvpn
+  ];
   environment.systemPackages =
     (with pkgs; [
       jujutsu
@@ -150,6 +154,7 @@
       kubo
       # docker
       tor-browser-bundle-bin
+
       protonvpn-gui
 
       gprof2dot
