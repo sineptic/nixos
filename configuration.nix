@@ -125,7 +125,7 @@
     ]);
   fonts.enableDefaultPackages = false;
 
-  networking.firewall.checkReversePath = false;
+  # networking.firewall.checkReversePath = false;
   networking.networkmanager.plugins = [
     pkgs.networkmanager-openvpn
   ];
@@ -158,7 +158,7 @@
       protonvpn-gui
 
       gprof2dot
-      linuxKernel.packages.linux_6_6.perf
+      perf
       graphviz
     ])
     ++ (with pkgs-stable; [
