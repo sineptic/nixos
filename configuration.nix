@@ -147,6 +147,7 @@
       file
 
       zed-editor
+      neovim
       nixd
       nil
       alejandra
@@ -164,7 +165,6 @@
     ++ (with pkgs-stable; [
       git
       vim
-      neovim
 
       gnupg
       pass
