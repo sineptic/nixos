@@ -107,7 +107,6 @@
       recursive
       inter
       maple-mono.CN
-      dm-mono
 
       atkinson-hyperlegible-next
       lexend
@@ -117,11 +116,12 @@
       space-mono
       martian-mono
       jetbrains-mono
-      zed-mono
       geist-mono
       terminess-ttf
       gohufont
       fantasque-sans-mono
+      cascadia-code
+      intel-one-mono
     ]);
   fonts.enableDefaultPackages = false;
 
