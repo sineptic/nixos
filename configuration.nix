@@ -154,7 +154,7 @@
 
       kubo
       # docker
-      tor-browser-bundle-bin
+      tor-browser
 
       protonvpn-gui
 
