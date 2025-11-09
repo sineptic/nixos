@@ -163,13 +163,13 @@
       graphviz
     ])
     ++ (with pkgs-stable; [
+      appimage-run
+
       git
       vim
 
       gnupg
       pass
-
-      yandex-music # new version doesn't work somewhy
     ]);
   # virtualisation.docker.enable = true;
 
