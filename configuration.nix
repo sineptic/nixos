@@ -125,6 +125,8 @@
     ]);
   fonts.enableDefaultPackages = false;
 
+  # FIXME
+  # networking.firewall.enable = false;
   # networking.firewall.checkReversePath = false;
   networking.networkmanager.plugins = [
     pkgs.networkmanager-openvpn
