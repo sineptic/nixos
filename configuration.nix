@@ -88,6 +88,9 @@
       tokei
       single-file-cli
 
+      amp-cli
+      jrnl
+
       # Experimental apps, maybe unneeded
       blanket
       bustle
@@ -131,6 +134,7 @@
   networking.networkmanager.plugins = [
     pkgs.networkmanager-openvpn
   ];
+
   environment.systemPackages =
     (with pkgs; [
       jujutsu
@@ -153,12 +157,16 @@
       nixd
       nil
       alejandra
+      valgrind
+      kdePackages.kcachegrind
+      samply
 
       kubo
       # docker
       tor-browser
 
       protonvpn-gui
+      openvpn
 
       gprof2dot
       perf
@@ -174,6 +182,7 @@
       pass
     ]);
   # virtualisation.docker.enable = true;
+  # services.openvpn.servers.<vpn_name>.updateResolvConf = false;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
