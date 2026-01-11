@@ -27,6 +27,13 @@
   };
   time.timeZone = "Europe/Moscow";
 
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
+
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
@@ -57,7 +64,6 @@
       typos
       clang-tools
 
-      rustup
       zig
       just
       cargo-nextest
@@ -92,15 +98,13 @@
       jrnl
 
       # Experimental apps, maybe unneeded
+      binary
       blanket
-      bustle
       curtail
       dialect
       errands
-      junction
       newsflash
       gnome-obfuscate
-      resources
       tuba
     ];
   };
@@ -140,7 +144,7 @@
       jujutsu
       lazygit
       clang
-      nushell
+      ruby
 
       alacritty
       fish
@@ -161,6 +165,9 @@
       kdePackages.kcachegrind
       samply
 
+      mold
+      wild
+
       kubo
       # docker
       tor-browser
@@ -174,12 +181,16 @@
     ])
     ++ (with pkgs-stable; [
       appimage-run
+      libresprite
 
       git
       vim
 
       gnupg
       pass
+
+      # it want build from source somewhy
+      rustup
     ]);
   # virtualisation.docker.enable = true;
   # services.openvpn.servers.<vpn_name>.updateResolvConf = false;
