@@ -144,7 +144,6 @@
       jujutsu
       lazygit
       clang
-      ruby
 
       alacritty
       fish
