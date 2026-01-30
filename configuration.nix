@@ -60,6 +60,8 @@
       yazi
       halloy
 
+      vscode-fhs
+
       lua-language-server
       typos
       clang-tools
