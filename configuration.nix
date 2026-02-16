@@ -67,6 +67,7 @@
       clang-tools
 
       zig
+      zls
       just
       cargo-nextest
       cargo-flamegraph
@@ -159,6 +160,7 @@
 
       zed-editor
       neovim
+      flow-control
       nixd
       nil
       alejandra
