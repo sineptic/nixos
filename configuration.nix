@@ -59,6 +59,7 @@
       ungoogled-chromium
       yazi
       halloy
+      ghostty
 
       vscode-fhs
 
@@ -117,6 +118,7 @@
       recursive
       inter
       maple-mono.CN
+      ia-writer-quattro
 
       atkinson-hyperlegible-next
       lexend
