@@ -173,11 +173,11 @@
       mold
       wild
 
-      kubo
+      # kubo
       # docker
       tor-browser
 
-      protonvpn-gui
+      proton-vpn
       openvpn
 
       gprof2dot
