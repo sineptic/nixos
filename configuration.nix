@@ -73,12 +73,9 @@
       cargo-nextest
       cargo-flamegraph
       bun
-      deno
       uv
       uxn
-      go
-      gopls
-      gofumpt
+      sqlite
 
       telegram-desktop
       zellij
@@ -98,7 +95,6 @@
       tokei
       single-file-cli
 
-      amp-cli
       jrnl
 
       # Experimental apps, maybe unneeded
